@@ -3,6 +3,9 @@ import axios from "axios";
 import { DataContainer, DataItem, ListContainer } from "./styled";
 import { colors } from "../../lib/colors";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSquareCheck, faSquareXmark } from "@fortawesome/free-solid-svg-icons";
+
 const TodosList = () => {
   const navigate = useNavigate();
   const [todos, setTodos] = useState();
@@ -14,7 +17,7 @@ const TodosList = () => {
 
   const ListHeader = () => {
     return (
-    <DataContainer bgColor={colors.blue} txtColor={colors.white}>
+    <DataContainer bgColor={colors.blue}>
       <DataItem width="15%" isTitle>
         ID
       </DataItem>
@@ -30,7 +33,7 @@ const TodosList = () => {
   
   const TodosList = () => {
     return todos.map(item=>
-      <DataContainer isItem key={item.id} bgColor={item.id%2? colors.softGrey : colors.strongGrey}
+      <DataContainer isItem key={item.id} bgColor={item.id%2? colors.softGrey : colors.mediumGrey}
       onClick={()=>navigate("/details",
         {state: {id: item.id, title: item.title, completed: item.completed}}
         )}>
@@ -41,7 +44,7 @@ const TodosList = () => {
           {item.title}
         </DataItem>
         <DataItem width="15%" font="bold">
-          {item.completed?"Yes":"No"}
+          <FontAwesomeIcon icon={item.completed?faSquareCheck:faSquareXmark} color={item.completed?colors.green:colors.red}/>          
         </DataItem> 
       </DataContainer>
     ) 

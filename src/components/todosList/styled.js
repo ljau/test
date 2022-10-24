@@ -12,11 +12,13 @@ export const ListContainer = styled.div`
   margin-bottom: 5%;
   border-radius: 10px;
   overflow: hidden;
+  @media only screen and (max-width: 600px) {
+    width: 85%;
+  }
 `;
 
 export const DataContainer = styled.div`
   background-color: ${({ bgColor }) => bgColor ?? colors.softGrey};
-  color: ${({ txtColor }) => txtColor ?? colors.black};
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -49,6 +51,8 @@ export const DataItem = styled.div`
     if(isTitle){
       return `
         font-weight: bold;
+        background-color: ${colors.blue};
+        color: ${colors.white};
       `;
     }  
   }}
@@ -62,6 +66,5 @@ export const DataItem = styled.div`
   text-align: center;
   @media only screen and (max-width: 600px) {
     font-size: small;
-    
   }
 `;
