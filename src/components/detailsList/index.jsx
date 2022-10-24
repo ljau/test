@@ -1,7 +1,5 @@
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { colors } from '../../lib/colors';
 import BackButton from '../backButton';
 import { DataContainer, DataItem, ListContainer } from '../todosList/styled';
