@@ -5,11 +5,14 @@ export const DescriptionBox = styled.div`
   text-align: justify;
   display: flex;
   height: 100%;
-  width: 70%;
+  width: 60%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 10vh;
+  margin-top: 10vh;
+  border-radius: 2%;
+  padding: 5%;
+  background: linear-gradient(90deg, ${colors.softGrey} 0%, ${colors.strongGrey} 100%);
 `;
 
 export const DescriptionTitle = styled.p`

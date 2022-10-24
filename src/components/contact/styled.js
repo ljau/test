@@ -5,9 +5,13 @@ export const ListContainer = styled.div`
   text-align: justify;
   display: flex;
   height: 100%;
-  width: 100%;
-  padding-top: 10vh;
+  width: auto;
+  padding: 5%;
+  margin-top: 10vh;
   justify-content: center;
+  border-radius: 5%;
+  background: linear-gradient(90deg, ${colors.softGrey} 0%, ${colors.strongGrey} 100%);
+
 `;
 
 export const CustomList = styled.dl`
@@ -26,7 +30,7 @@ export const ListItem = styled.dt`
 
   @media only screen and (max-width: 600px) {
     min-width: 8%;
-    font-size: 1.2rem;
+    font-size: 5vw;
   }
 `;
 
@@ -39,8 +43,7 @@ export const ListItemData = styled.dd`
 export const ListLink = styled.a`
   color: ${colors.black};
   :hover {
-    background-color: ${colors.strongGrey};
-    color: ${colors.blue};
+    color: ${colors.white};
     cursor: pointer;
   }
 `;
